@@ -1,0 +1,146 @@
+$bgColor: #FFF4D5;
+$AccentColor: #E17055;
+$medGray: #a09f9c;
+$medGray2: #D5d5d5;
+
+$tan: #f0efec;
+
+$offwhite: #fdfcfc;
+
+$primaryFontFamily: "canada-type-gibson",sans-serif;
+$secondaryFontFamily: '"museo-slab",serif'; 
+
+$brandPink: #870b51;
+$brandPinkLight: #9c3e72;
+$brandPinkBright: #bd1172;
+
+$oldBrandPink: #9b105f;
+
+$textBlack: #2C3A47;
+$lightBlack: #464646;
+
+$information-phone: "only screen and (max-width : 768px)";
+
+header {
+	text-align: center;
+	margin: 10px auto;
+}
+.container {
+	width:980px;
+	margin:0 auto;
+	max-width: 100%;
+	
+	.productList{
+		overflow: hidden;
+		margin-top: 8px;
+		display: flex;
+    	flex-direction: row;
+    	flex-wrap: wrap;
+    	font-family: $primaryFontFamily;
+
+		.Groceriesitem{
+			width: 20%;
+			border: 2px solid $AccentColor;
+			border-left: none;
+			border-top: none;
+			padding: 20px 10px 40px;
+			margin: 10px;
+			background: $bgColor;
+
+			.QTY {
+				text-align: right;
+				margin-right: 5px;
+				color: $AccentColor;
+			}
+
+			.item {
+				font-size: 15px;
+				font-weight: 600;
+				color: $textBlack;
+				padding-bottom: 10px;
+    			border-bottom: 2px solid #ddd;
+			}
+
+			.brand-and-type{
+				color: $textBlack;
+				overflow: hidden;
+    			text-overflow: ellipsis;
+    			white-space: nowrap;
+			}
+
+			.category {
+				color: $AccentColor;
+				position: absolute;
+			}
+		}
+	}
+}
+
+// for tablets
+@media only screen and (max-width: 979px) {
+  	.container {
+		// max-width: 100%;
+
+		.productList{
+			.Groceriesitem{ 
+				width: 26%;
+				margin: 15px;
+			}
+		}
+	}
+}
+
+// media query below 767px
+@media only screen and (max-width: 767px) {
+	.container {
+		// max-width: 100%;
+		
+		.productList {
+			flex-direction: column;
+			
+			.Groceriesitem {
+				width: 100%;
+				margin: 10px;
+
+				.QTY {
+					margin-right: 35px;
+				}
+					
+				.item {
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}
+
+//media query for Mobiles
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+	.container {
+			// max-width: 100%;
+			
+			.productList {
+				flex-direction: column;
+				
+				.Groceriesitem {
+					width: 100%;
+					margin: 10px;
+
+					.QTY {
+						margin-right: 35px;
+					}
+						
+					.item {
+						font-size: 20px;
+					}
+				}
+			}
+		}
+	}
+
+
+
+

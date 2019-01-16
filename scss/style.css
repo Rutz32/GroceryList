@@ -1,0 +1,68 @@
+header {
+  text-align: center;
+  margin: 10px auto; }
+
+.container {
+  width: 980px;
+  margin: 0 auto;
+  max-width: 100%; }
+  .container .productList {
+    overflow: hidden;
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: "canada-type-gibson", sans-serif; }
+    .container .productList .Groceriesitem {
+      width: 20%;
+      border: 2px solid #E17055;
+      border-left: none;
+      border-top: none;
+      padding: 20px 10px 40px;
+      margin: 10px;
+      background: #FFF4D5; }
+      .container .productList .Groceriesitem .QTY {
+        text-align: right;
+        margin-right: 5px;
+        color: #E17055; }
+      .container .productList .Groceriesitem .item {
+        font-size: 15px;
+        font-weight: 600;
+        color: #2C3A47;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #ddd; }
+      .container .productList .Groceriesitem .brand-and-type {
+        color: #2C3A47;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+      .container .productList .Groceriesitem .category {
+        color: #E17055;
+        position: absolute; }
+
+@media only screen and (max-width: 979px) {
+  .container .productList .Groceriesitem {
+    width: 26%;
+    margin: 15px; } }
+@media only screen and (max-width: 767px) {
+  .container .productList {
+    flex-direction: column; }
+    .container .productList .Groceriesitem {
+      width: 100%;
+      margin: 10px; }
+      .container .productList .Groceriesitem .QTY {
+        margin-right: 35px; }
+      .container .productList .Groceriesitem .item {
+        font-size: 20px; } }
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  .container .productList {
+    flex-direction: column; }
+    .container .productList .Groceriesitem {
+      width: 100%;
+      margin: 10px; }
+      .container .productList .Groceriesitem .QTY {
+        margin-right: 35px; }
+      .container .productList .Groceriesitem .item {
+        font-size: 20px; } }
+
+/*# sourceMappingURL=style.css.map */
