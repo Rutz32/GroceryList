@@ -3,17 +3,18 @@ DOMElement = document.querySelector('.productList');
 var xhr = new XMLHttpRequest();
 			
 xhr.onload = function () {
-	if (this.status == 200 ) {
+	if (this.status == 200 && this.readyState == 4) {
 		try {
 			var obj = JSON.parse(this.responseText);
 			loadingRanking(obj);
 						
 		} catch(e) {
 			console.log('No Json data received');
-					}
-		} else {
-				console.warn("Error with data");
 		}
+
+	} else {
+		console.warn("Error with data");
+	}
 }
 			
 function loadingRanking(obj) { 
@@ -32,7 +33,6 @@ function loadingRanking(obj) {
 	}
 }
 
-loadingRanking();
 xhr.open('get' , 'groceries.json', true);
-			xhr.send();
+xhr.send();
 			
